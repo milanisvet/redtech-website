@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedTech</title>
+  </head>
+  <body>
+    <header class="bg-white sticky top-0 z-50">
+      <div class="container w-full max-w-7xl">
+        <div
+          class="
+            flex flex-col
+            max-w-screen-xl
+            p-5
+            mx-auto
+            md:items-center md:justify-between md:flex-row md:px-6
+            lg:px-8
+          "
+        >
+          <div
+            class="flex flex-row items-center justify-between lg:justify-start"
+          >
+            <a
+              id="logo-link"
+              href="#"
+              class="
+                text-lg
+                font-bold
+                tracking-tighter
+                text-blue-400
+                transition
+                duration-500
+                ease-in-out
+                transform
+                tracking-relaxed
+                lg:pr-8
+                bg-cover
+              "
+            >
+              <img class="h-14" src="./assets/vectors/logo.svg" />
+            </a>
+            <!-- Hamburger -->
+            <button
+              class="
+                rounded-lg
+                md:hidden
+                focus:outline-none focus:shadow-outline
+              "
+              @click="open = !open"
+              id="hamburger"
+            >
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+                <path
+                  x-show="!open"
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  x-show="open"
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                  style="display: none"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav
+            :class="{'flex': open, 'hidden': !open}"
+            class="
+              flex-col flex-grow
+              hidden
+              md:flex md:justify-end md:flex-row
+              transition-all
+              duration-300
+            "
+            id="navigation"
+          >
+            <ul
+              class="
+                space-y-6
+                list-none
+                md:space-y-0 md:items-center md:inline-flex
+                font-display
+              "
+            >
+              <li class="text-center">
+                <a href="#services" class="nav-link"> Services </a>
+              </li>
+              <li class="text-center">
+                <a href="#team" class="nav-link"> Our team</a>
+              </li>
+              <li class="text-center">
+                <a href="#contact" class="nav-link"> Contact </a>
+              </li>
+              <li class="text-center">
+                <a href="#" class="nav-link"> Blog </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero-->
+      <section>
+        <div class="section-container">
+          <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+            <div
+              class="
+                flex flex-col
+                items-start
+                mb-16
+                text-left
+                lg:flex-grow
+                xl:w-1/2 xl:pr-24
+                md:mb-0
+              "
+            >
+              <span
+                class="
+                  mb-8
+                  text-xs
+                  font-bold
+                  tracking-widest
+                  text-blue-400
+                  uppercase
+                "
+              >
+                Logical solutions
+              </span>
+              <h1
+                class="
+                  mb-8
+                  text-4xl
+                  font-bold
+                  leading-none
+                  tracking-tighter
+                  gradient-text
+                  md:text-7xl
+                  xl:text-5xl
+                  pb-2
+                  pr-2
+                  font-display
+                "
+              >
+                We offer enteprise grade software development
+              </h1>
+              <p class="mb-8 text-base leading-relaxed text-left text-gray-400">
+                We are a group of software engineers and data scientists
+                specialized in enterprise grade software development.
+              </p>
+              <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
+                <div class="mt-3 rounded-lg sm:mt-0">
+                  <button
+                    class="
+                      items-center
+                      block
+                      px-10
+                      py-4
+                      text-base
+                      font-medium
+                      text-center text-red-400
+                      transition
+                      duration-500
+                      bg-white
+                      shadow
+                      rounded-xl
+                      hover:bg-red-400 hover:text-white
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-offset-2
+                      focus:ring-red-400
+                    "
+                  >
+                    Get in touch
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="w-full mt-12 lg:w-5/6 lg:max-w-lg rounded-xl xl:mt-0">
+              <div>
+                <div class="relative w-full max-w-lg">
+                  <img
+                    class="
+                      object-cover object-center
+                      mx-auto
+                      rounded-lg
+                      shadow-2xl
+                    "
+                    alt="hero"
+                    src="./assets/vectors/hero-image.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-800" id="services">
+        <img src="./assets/vectors/wavesOpacity.svg" class="w-full" />
+        <div class="section-container text-white">
+          <h2 class="font-display text-4xl pt-4">Services</h2>
+          <div class="relative items-center w-full py-12 mx-auto max-w-7xl">
+            <div class="grid w-full grid-cols-1 gap-12 mx-auto lg:grid-cols-2">
+              <div>
+                <h3
+                  class="
+                    mx-auto
+                    mb-8
+                    text-2xl
+                    font-semibold
+                    leading-none
+                    tracking-tighter
+                    text-neutral-600
+                    lg:text-3xl
+                    gradient-text
+                    font-display
+                  "
+                >
+                  Short length headline.
+                </h3>
+                <p class="mx-auto text-base leading-relaxed text-gray-300">
+                  It wasn't a dream. His room, a proper human room although a
+                  little too small, lay peacefully between its four familiar
+                  walls. A collection of textile samples lay spread out on the
+                  table - Samsa was a travelling salesman - and above it there
+                  hung a picture that he had recently cut out of an illustrated
+                  magazine and housed in a nice, gilded frame. It showed a lady
+                  fitted out with a fur hat and fur boa who sat upright, raising
+                  a heavy fur muff that covered the whole of her lower arm
+                  towards the viewer.
+                </p>
+              </div>
+              <div>
+                <h3
+                  class="
+                    mx-auto
+                    mb-8
+                    text-2xl
+                    font-semibold
+                    leading-none
+                    tracking-tighter
+                    text-neutral-600
+                    lg:text-3xl
+                    gradient-text
+                    font-display
+                  "
+                >
+                  One second I'm a strike
+                </h3>
+                <p class="mx-auto text-base leading-relaxed text-gray-300">
+                  One morning, when Gregor Samsa woke from troubled dreams, he
+                  found himself transformed in his bed into a horrible vermin.
+                  He lay on his armour-like back, and if he lifted his head a
+                  little he could see his brown belly, slightly domed and
+                  divided by arches into stiff sections. The bedding was hardly
+                  able to cover it and seemed ready to slide off any moment. His
+                  many legs, pitifully thin compared with the size of the rest
+                  of him, waved about helplessly as he looked.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technologies -->
+          <img class="w-full mt-10" src="./assets/vectors/technologies.svg" />
+        </div>
+
+        <img
+          src="./assets/vectors/wavesOpacity.svg"
+          class="w-full transform rotate-180"
+        />
+      </section>
+
+      <!-- Team section -->
+      <div class="header-container" id="team">
+        <h2 class="gradient-text font-display text-4xl">Our Team</h2>
+      </div>
+      <section class="md:overflow-x-scroll 2xl:overflow-x-hidden">
+        <div class="py-12 md:py-20">
+          <div
+            class="
+              flex flex-wrap
+              mx-auto
+              md:flex-nowrap
+              flex-grow-0
+              2xl:justify-center
+            "
+          >
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://d33wubrfki0l68.cloudfront.net/d75073109edbac6e4c4e3e3e15cdee9f18b2ffe5/bf256/images/ogtwitter.png"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80
+                    md:-ml-16
+                    md:hover:-translate-x-16
+                    md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://wickedbackgrounds.com/images/opengraphTwitter.png"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80
+                    md:-ml-16
+                    md:hover:-translate-x-16
+                    md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://wickedpopups.com/images/ogTwitter.png"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80
+                    md:-ml-16
+                    md:hover:-translate-x-16
+                    md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://ph-files.imgix.net/f4e3679c-25d7-4a6d-b4a4-5b5052f8bb32.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&fit=max&dpr=2"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80
+                    md:-ml-16
+                    md:hover:-translate-x-16
+                    md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://d33wubrfki0l68.cloudfront.net/d75073109edbac6e4c4e3e3e15cdee9f18b2ffe5/bf256/images/ogtwitter.png"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex w-full">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    items-start
+                    m-1
+                    transition
+                    duration-300
+                    ease-in-out
+                    delay-150
+                    transform
+                    bg-white
+                    shadow-2xl
+                    rounded-xl
+                    md:w-80
+                    md:-ml-16
+                    md:hover:-translate-x-16
+                    md:hover:-translate-y-8
+                  "
+                >
+                  <img
+                    class="
+                      object-cover object-center
+                      w-full
+                      rounded-t-xl
+                      lg:h-48
+                      md:h-36
+                    "
+                    src="https://d33wubrfki0l68.cloudfront.net/374d3e75d4ab6cf2141b12e76a8de965299dff67/9e8fe/images/placeholders/square.svg"
+                    alt="blog"
+                  />
+                  <div class="px-6 py-8">
+                    <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
+                      <span class="">Entry </span>
+                    </h4>
+                    <p
+                      class="
+                        mt-4
+                        text-base
+                        font-normal
+                        text-gray-300
+                        leading-relax
+                      "
+                    >
+                      Install Tailwind CSS without any Javascript Framewrok
+                      locally with purgeCSS, enable the dark mode option,
+                      prefferences or class is upt to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section-container" id="contact">
+        <h2 class="gradient-text font-display text-4xl">Contact</h2>
+        <div class="md:flex md:flex-nowrap">
+          <div class="py-6 md:pr-12 lg:pr-24 mt-6">
+            <h3 class="text-2xl font-bold mb-3">Main office</h3>
+            <p class="text-gray-400">
+              One morning, when Gregor Samsa woke from troubled dreams, he found
+              himself transformed in his bed into a horrible vermin. The bedding
+              was hardly able to cover it and seemed ready to slide off any
+              moment.
+            </p>
+            <div class="mt-3">
+              <img
+                class="w-8 fill-current text-gray-400 inline mr-4"
+                src="assets/vectors/call-outline.svg"
+              />
+              <h4 class="inline text-gray-400">+381 63 555 333</h4>
+            </div>
+            <div class="mt-3">
+              <img
+                class="w-8 fill-current text-gray-400 inline mr-4"
+                src="assets/vectors/mail-outline.svg"
+              />
+              <h4 class="inline text-gray-400">office@redtech.rs</h4>
+            </div>
+            <div class="mt-3">
+              <a
+                href="https://www.linkedin.com/company/red-tech/"
+                target="_blank"
+              >
+                <img
+                  class="w-8 fill-current text-gray-400 inline mr-4"
+                  src="assets/vectors/logo-linkedin.svg"
+              /></a>
+              <h4 class="inline text-gray-400">@RedTech</h4>
+            </div>
+            <img
+              class="h-40 mt-6 sm:mx-auto md:-ml-6 md:mr-0"
+              src="assets/vectors/logo.svg"
+              id
+            />
+          </div>
+          <img class="hidden md:block -mt-24" src="assets/vectors/phone.svg" />
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-50 text-gray-400">
+      <div class="header-container flex justify-center">
+        <div class="">Copyright © 2021 RedTech. All rights reserved.</div>
+        <div class="">
+          <a href="https://www.linkedin.com/company/red-tech/" target="_blank">
+            <img
+              class="w-8 fill-current text-gray-400 inline ml-6 -mt-1"
+              src="assets/vectors/logo-linkedin.svg"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let hamburger = document.getElementById('hamburger');
   hamburger.addEventListener('click', NavigationToggler());
 
-  let navigationLinks = document.querySelectorAll('li a, #logo-link');
+  let navigationLinks = document.querySelectorAll('li a, #logo-link, #call-to-action');
   console.log(navigationLinks);
 
   for (navigationLink of navigationLinks) {

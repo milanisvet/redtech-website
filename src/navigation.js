@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', () => {
   hamburger.addEventListener('click', NavigationToggler());
 
   let navigationLinks = document.querySelectorAll('li a, #logo-link, #call-to-action');
-  console.log(navigationLinks);
 
   for (navigationLink of navigationLinks) {
     navigationLink.addEventListener('click', scrollIntoView);

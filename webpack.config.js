@@ -33,6 +33,13 @@ module.exports = {
           filename: 'assets/vectors/[hash][ext][query]',
         },
       },
+      {
+        test: /\.jpg$|\.png$/i,
+        type: 'asset',
+        generator: {
+          filename: 'assets/images/[hash][ext][query]',
+        },
+      },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],

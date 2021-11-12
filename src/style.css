@@ -10,9 +10,7 @@
 }
 
 .nav-link {
-    @apply p-2 lg:px-6 lg:py-3 lg:text-sm md:text-base sm:text-lg border-b-2 border-transparent 
-    md:hover:border-red-400 md:px-3 text-gray-900 hover:text-red-400
-    font-display uppercase transition-all duration-300;
+    @apply p-2 lg:px-6 lg:py-3 lg:text-sm md:text-base sm:text-lg border-b-2 border-transparent md:hover:border-red-400 md:px-3 text-gray-900 hover:text-red-400 font-display uppercase transition-all duration-300;
 }
 
 .gradient-text {
@@ -20,9 +18,9 @@
 }
 
 .section-container {
-    @apply px-4 py-12 container max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24
+    @apply px-4 py-12 container max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24;
 }
 
 .header-container {
-    @apply px-4 py-3 container max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-6
+    @apply px-4 py-3 container max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-6;
 }

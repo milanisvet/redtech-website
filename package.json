@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve",
-    "build": "export NODE_ENV=production && webpack"
+    "start": "webpack --watch",
+    "build": "export NODE_ENV=production && webpack",
+    "dev-start": "npx webpack --watch",
+    "dev-build": "set NODE_ENV=production && npx webpack"
   },
   "author": "",
   "license": "ISC",
